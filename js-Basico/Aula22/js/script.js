@@ -4,23 +4,30 @@ function meuEscopo(){
 
     const pessoas = [];
 
-    function recebeEventoForm(evento){
+    function RecebeInformaçõesForm(evento){
         evento.preventDefault();
 
         const Nome = form.querySelector('.Nome');
         const Sobrenome = form.querySelector('.Sobrenome');
-        const Peso = form.querySelector('.Peso');
-        const Altura = form.querySelector('.Altura');
+        const Idade = form.querySelector('.Idade');
+        const Endereco = form.querySelector('.Endereco');
+        const Bairro = form.querySelector('.Bairro');
+        const Telefone = form.querySelector('.Telefone');
 
         pessoas.push({
-            Nome: Nome.value, Sobrenome: Sobrenome.value, Peso: Peso.value, Altura: Altura.value
+            Nome: Nome.value,
+            Sobrenome: Sobrenome.value,
+            Idade: Idade.value,
+            Endereco: Endereco.value,
+            Bairro: Bairro.value,
+            Telefone: Telefone.value
         });
 
         console.log(pessoas);
 
-        resultado.innerHTML += `<p>Nome:${Nome.value} ${Sobrenome.value}<br> Peso:${Peso.value} <br>Altura:${Altura.value}</p>`;
+        resultado.innerHTML += `<p>Nome: ${Nome.value} ${Sobrenome.value} <br> Idade: ${Idade.value} <br> Endereco: ${Endereco.value} <br> Bairro: ${Bairro.value} <br> Telefone: ${Telefone.value}</p>`;
     }
 
-    form.addEventListener('submit', recebeEventoForm);  
+    form.addEventListener('submit', RecebeInformaçõesForm); 
 }
 meuEscopo();
