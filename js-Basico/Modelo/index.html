@@ -5,40 +5,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>IMC - Cálculo de índice de massa corporal</title>
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
     <section class="container">
-        <h1>*Formulário para serviço de entraga Amazon*</h1>
+        <!-- <h2>Tabela IMC</h2>
         <p>
-            ABaixo segue o formulário de serviço, passe as anotações necessárias para
-            o serviço de entrega ser feita com sucesso, passando as informações
-            certas e mais simplificada possível.
+            <h3>IMC</h3>
+            <p>Menos do que 18,5</p>
+            <p>Entre 18,5 e 24,9</p>
+            <p>Entre 25 e 29,9</p>
+            <p>Entre 30 e 34,9</p>
+            <p>entre 35 e 39,9</p>
+            <p>Mais do que 40</p>
+
+            <h3>Resultado</h3>
+            <p>Abaixo do peso</p>
+            <p>Peso normal</p>
+            <p>Sobrepeso</p>
+            <p>Obesidade grau 1</p>
+            <p>Obesidade grau 2</p>
+            <p>Obesidade grau 3</p> -->
+
+            <h1>Calcule seu IMC</h1>
         </p>
 
-        <form action="">
-            <label for="Nome">Nome: </label>
-            <input type="text" id="Nome">
+        <form action="/" class="formulário" method="POST">
+            <label for="Peso">Peso: </label>
+            <input type="text" class="Peso" name="Peso">
 
-            <label for="Sobrenome">Sobrenome: </label>
-            <input type="text" id="Sobrenome">
+            <label for="Altura">Altura: </label>
+            <input type="text" class="Altura">
 
-            <label for="CPF">CPF: </label>
-            <input type="text" id="CPF">
-
-            <label for="Endereço">Endereco: </label>
-            <input type="text" id="Endereço">
-
-            <label for="Bairro">Bairro: </label>
-            <input type="text" id="Bairro">
-
-            <label for="N° de telefone">N° de telefone: </label>
-            <input type="text" id="N° de telefone">
-
-            <button>Enviar</button>
+            <button>Calcular</button>
         </form>
         <div class="resultado"></div>
     </section>

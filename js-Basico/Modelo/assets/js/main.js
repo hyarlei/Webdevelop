@@ -1,33 +1,67 @@
-function meuEscopo(){
-    const form = document.querySelector('.form');
-    const resultado = document.querySelector('.resultado');
+const form = document.querySelector('.formulário');
 
-    const pessoas = [];
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const inputPeso = e.target.querySelector(".Peso");
+    const inputAltura = e.target.querySelector(".Altura");
 
-    function RecebeInformaçõesForm(evento){
-        evento.preventDefault();
+    const Peso = Number(inputPeso.value);
+    const Altura = Number(inputAltura.value);
 
-        const Nome = form.querySelector('.Nome');
-        const Sobrenome = form.querySelector('.Sobrenome');
-        const CPF = form.querySelector('.CPF');
-        const Endereco = form.querySelector('.Endereco');
-        const Bairro = form.querySelector('.Bairro');
-        const Telefone = form.querySelector('.Telefone');
-
-        pessoas.push({
-            Nome: Nome.value,
-            Sobrenome: Sobrenome.value,
-            CPF: CPF.value,
-            Endereco: Endereco.value,
-            Bairro: Bairro.value,
-            Telefone: Telefone.value
-        });
-
-        console.log(pessoas);
-
-        resultado.innerHTML += `<p>Nome: ${Nome.value} ${Sobrenome.value} <br> CPF: ${CPF.value} <br> Endereco: ${Endereco.value} <br> Bairro: ${Bairro.value} <br> Telefone: ${Telefone.value}</p>`;
+    if (!Peso) {
+        setResultado("Peso inválido", false);
+        return;
     }
 
-    form.addEventListener('submit', RecebeInformaçõesForm); 
+    if (!Altura) {
+        setResultado("Altura inválida", false);
+        return;
+    }
+
+    const IMC = getIMC(Peso, Altura);
+    const nivelImc = getNivelImc(IMC);
+
+    const msg = `Seu IMC é ${IMC} (${nivelImc})}.`;
+
+    setResultado(msg, true);
+});
+
+
+function getNivelImc(IMC) {
+    const nivel = ['Abaixo do peso', 'Peso normal', 'Sobrepeso',
+        'Obesidade grau 1', 'Obesidade grau 2', 'Obesidade grau 3'];
+
+    if (IMC >= 39.9) return nivel[5];
+    if (IMC >= 34.9) return nivel[4];
+    if (IMC >= 29.9) return nivel[3];
+    if (IMC >= 24.9) return nivel[2];
+    if (IMC >= 18.5) return nivel[1];
+    if (IMC < 18.5) return nivel[0];
+
 }
-meuEscopo();
+
+function getIMC(Peso, Altura) {
+    const IMC = Peso / Altura ** 2;
+    return IMC.toFixed(2);
+}
+
+function criaP() {
+    const p = document.createElement('p');
+    return p;
+}
+
+function setResultado(msg, isValid) {
+    const resultado = document.querySelector('.resultado');
+    resultado.innerHTML = "";
+
+    const p = criaP();
+
+    if (isValid) {
+        p.classList.add('parágrafo-resultado');
+    } else {
+        p.classList.add('bad');
+    }
+
+    p.innerHTML = msg;
+    resultado.appendChild(p);
+}
