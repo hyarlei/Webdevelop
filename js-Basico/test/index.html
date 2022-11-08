@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Serviço de entraga Amazon</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-    <form class="form" action="" method="get">
-        <h3>---------Formulário para serviço de entrega Amazon-----------</h3>
-        <p>Nome: <input type="text" class="Nome"></p>
-        <p>Sobrenome: <input type="text" class="Sobrenome"></p>
-        <p>Idade: <input type="text" class="Idade"></p>
-        <p>Endereço: <input type="text" class="Endereço"></p>
-        <p>Bairro: <input type="text" class="Bairro"></p>
-        <p>N° de telefone: <input type="text" class="n° de telefone"></p>
-        <button>Enviar</button>
-    </form>
 
-    <div class="resultado"></div>
-    
-    <script src="js/script.js"></script>
+<body>
+
+    <section class="container">
+
+        <h1>Serviço de entrega da Amazon </h1>
+        <form action="/" class="formulario" method="POST">
+
+            <label for="Nome">Nome: </label>
+            <input type="text" class="Nome" name="Nome">
+
+            <label for="Sobrenome">Sobrenome: </label>
+            <input type="text" class="Sobrenome" name="Sobrenome">
+
+            <label for="Endereco">Endereco: </label>
+            <input type="text" class="Endereco" name="Endereco">
+
+            <label for="Bairro">Bairro: </label>
+            <input type="text" class="Bairro" name="Bairro">
+
+            <label for="Telefone">Telefone: </label>
+            <input type="text" class="Telefone" name="Telefone">
+            <button>Enviar</button>
+        </form>
+
+        <div class="resultado"></div>
+
+    </section>
+    <script src="./assets/js/script.js"></script>
 </body>
+
 </html>
