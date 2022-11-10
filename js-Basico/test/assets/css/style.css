@@ -70,4 +70,8 @@ form button:hover {
 
 .ok {
     background: rgb(78, 248, 177);
+    border: none;
+    margin-top: 19px;
+    border-radius: 15px;
+    margin: 50px auto;
 }

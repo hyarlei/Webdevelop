@@ -43,7 +43,7 @@ form.addEventListener('submit', function (e) {
     const msg = `Suas informações são: <br>Nome: ${Nome} ${Sobrenome}<br> Endereco: ${Endereco}<br> Bairro: ${Bairro}<br> Telefone: ${Telefone}.`;  
     const msg2 = `informaçoes enviadas com sucesso!`; 
 
-    setResultado(msg,msg2, true);
+    setResultado(msg, msg2, true);
 });
 
 function criap() {
@@ -51,7 +51,7 @@ function criap() {
     return p;
 }
 
-function setResultado(msg,msg2, isValid) {
+function setResultado(msg, msg2, isValid) {
     const resultado = document.querySelector('.resultado');
     const resultado2 = document.querySelector('.ok');
     resultado.innerHTML = "";
@@ -62,11 +62,11 @@ function setResultado(msg,msg2, isValid) {
 
     if (isValid) {
         p.classList.add('parágrafo-resultado');
+        p2.innerHTML= msg2;
     } else {
         p.classList.add('bad');
     }
     p.innerHTML = msg;
-    p2.innerHTML= msg2;
-    resultado2.appendChild(p2)
+    resultado2.appendChild(p2);
     resultado.appendChild(p);
 }
