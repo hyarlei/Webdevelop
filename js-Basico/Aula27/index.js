@@ -17,15 +17,6 @@ const data = new Date();
 const DataBrasil = formatData(data);
 console.log(DataBrasil);
 
-
-
-
-
-
-
-
-
-
 // console.log("ms: ", data.getMilliseconds());
 // console.log("Dia da semana: ", data.getDay());// 0 - Domingo, 6 - Sábado
 // console.log(data.toString());
