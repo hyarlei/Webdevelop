@@ -31,6 +31,11 @@ function getDiaSemanaTexto(diaSemana) {
     }
 }
 
+// function getDiaSemanaTexto(diaSemana){
+//     const diasSemana = ["domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+//     return diasSemana[diaSemana];
+// }
+
 function getMesesTexto(Mes) {
     let MesTexto;
 
@@ -76,6 +81,11 @@ function getMesesTexto(Mes) {
             return MesTexto;
     }
 }
+
+// function getMesesTexto(numeroMes){
+//     const meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+//     return meses[numeroMes];
+// }
 
 function zeroAEsquerda(num){
     return num >= 10 ? num : `0${num}`;
