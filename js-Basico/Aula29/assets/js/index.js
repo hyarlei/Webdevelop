@@ -104,7 +104,6 @@ function criaData(data){
         ` ${zeroAEsquerda(data.getHours())}:${zeroAEsquerda(data.getMinutes())}`
     );
 }
-
 h1.innerHTML = criaData(data);
 
 // const h1 = document.querySelector('.container h1');
