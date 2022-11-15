@@ -1,8 +1,8 @@
 const elementos = [
     {tag: 'p', texto: "Escrever o que vc quiser."},
-    {tag: 'div', texto: "Frase 1"},
-    {tag: 'section', texto: "Frase 1"},
-    {tag: 'footer', texto: "Frase 1"},
+    {tag: 'div', texto: "Frase 2"},
+    {tag: 'section', texto: "Frase 3"},
+    {tag: 'footer', texto: "Frase 4"},
 ];
 
 
