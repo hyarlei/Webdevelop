@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(42, 163, 115);
+}
+
+.container{
+    background-color: aliceblue;    
+    width: 800px;
+    height: 200px;
+    max-width: 700px;
+    margin: 90px auto;
+    padding: 20px;
+    border-radius: 50px;
+}
