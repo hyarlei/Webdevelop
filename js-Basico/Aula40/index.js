@@ -14,5 +14,5 @@ function recebeN(num1, num2) {
 recebeN(num1, num2);
 
 /* const max2 = (x, y) => x > y ? x : y;
-console.log("o maior numero e: "+ max2(10, 99)); */
+console.log("o maior numero e: "+ max2(10, 99)); */ 
 
