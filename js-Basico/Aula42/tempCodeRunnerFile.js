@@ -1,0 +1,1 @@
+if(typeof numero !== "number") return numero;
