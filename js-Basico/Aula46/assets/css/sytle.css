@@ -13,13 +13,14 @@ body{
     box-sizing: border-box;
     outline: 0;
 }
+
 .container{
     background-color: rgb(116, 245, 90);
     /* width: 800px; */
     /* height: 250px; */
     max-width: 600px;
     margin: 80px auto;
-    padding: 10px;
+    padding: 70px;
     border-bottom: 10px;
     border-radius: 10px;
     cursor: pointer;
