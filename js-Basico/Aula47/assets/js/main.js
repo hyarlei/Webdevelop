@@ -12,7 +12,7 @@ inputTarefa.addEventListener('keypress', function (e) {
         if (!inputTarefa.value) return;
         criaTarefa(inputTarefa.value);
     }
-});
+}); 
 
 function limpaInput() {
     inputTarefa.value = '';
